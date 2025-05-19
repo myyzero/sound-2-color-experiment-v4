@@ -15,7 +15,9 @@ credentials = ServiceAccountCredentials.from_json_keyfile_dict(
 client = gspread.authorize(credentials)
 
 # Open the target Google Sheet
-sheet = client.open("Sound2ColorOutcome").sheet1
+# sheet = client.open("Sound2ColorOutcome").sheet1
+sheet = client.open_by_key("1ga4yQT0oUc3X1a1kEO6FdP3vzxdTAV3AwxQ4W2jo_-Q").sheet1
+
 
 # 👤 Participant info
 name = st.text_input("👤 Please enter your name")
